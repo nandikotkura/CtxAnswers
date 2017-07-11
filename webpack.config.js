@@ -19,6 +19,7 @@ var config = {
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
+        new ExtractTextPlugin("chosen.css"),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
             '$': "jquery",

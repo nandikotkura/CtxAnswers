@@ -29,9 +29,10 @@ class Navigation extends Component {
                              </span>
                                 <a data-toggle="dropdown" className="dropdown-toggle" href="#">
                             <span className="clear"> <span className="block m-t-xs"> <strong className="font-bold">Welcome</strong>
-                             </span> <span id ="desig" className="text-muted text-xs block">Software Engineer-1<b className="caret"></b></span> </span> </a>
+                             </span> <span id ="desig" className="text-muted text-xs block">Software Engineer-1 &emsp;<i className="fa fa-caret-down fa-1x" aria-hidden="true"></i></span> </span> </a>
                                 <ul className="dropdown-menu animated fadeInRight m-t-xs">
-                                    <li><a href="#"> Logout</a></li>
+                                    <li><a href="/#/profile"><i className="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>&emsp;Profile</a></li>
+                                    <li><a href="#"><i className="fa fa-sign-out fa-2x" aria-hidden="true"></i>&emsp;Logout</a></li>
                                 </ul>
                             </div>
                             <div className="logo-element">
@@ -39,7 +40,10 @@ class Navigation extends Component {
                             </div>
                         </li>
                         <li className={this.activeRoute("/main")}>
-                            <Link to="/main"><i className="fa fa-television"></i> <span className="nav-label">XenDesktop</span></Link>
+                            <Link to="/main"><i className="fa fa-home"></i> <span className="nav-label">Home</span></Link>
+                        </li>
+                        <li className={this.activeRoute("/XenDesktop")}>
+                            <Link to="/XenDesktop"><i className="fa fa-television"></i> <span className="nav-label">XenDesktop</span></Link>
                         </li>
                         <li className={this.activeRoute("/minor")}>
                             <Link to="/minor"><i className="fa fa-star fa-lg"></i> <span className="nav-label">XenApp</span></Link>
@@ -47,8 +51,8 @@ class Navigation extends Component {
                         <li className={this.activeRoute("/XenMobile")}>
                             <Link to="/XenMobile"><i className="fa fa-mobile fa-lg"></i> <span className="nav-label">XenMobile</span></Link>
                         </li>
-                        <li className={this.activeRoute("/sf")}>
-                            <Link to="/minor"><i className="fa fa-th-large"></i> <span className="nav-label">ShareFile</span></Link>
+                        <li className={this.activeRoute("/ShareFile")}>
+                            <Link to="/ShareFile"><i className="fa fa-th-large"></i> <span className="nav-label">ShareFile</span></Link>
                         </li>
                     </ul>
 

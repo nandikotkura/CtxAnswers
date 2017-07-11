@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import MainView from '../views/Main';
 import QuestionList  from '../views/QuestionList';
 import QuestionModal from '../views/QuestionModal';
-class Minor extends Component {
+class XenDesktop extends Component {
     formathtml = (dat)=>
     {
-        var Question = "Can policies be applied onto XenApp?";
+        var Question = "What is the role of Virtual Delivery Agent ?";
         var Author = "Indraneel";
         var Votes = "31"
+        var divStyle = {
+        display:'none'
+};
               return(  
-              <QuestionList Question ={Question} Author = {Author} Votes = {Votes} />
+             <QuestionList Question = {Question} Votes = {Votes} Author = {Author} />
               )
     }
+
     render() {
         var rep = [];
         var htmlcont = this.formathtml("hello");
@@ -22,9 +27,8 @@ class Minor extends Component {
              width:'100%'
                        }
         return (
-            
             <div className="ibox">
-            <QuestionModal Tag={[{name: 'NetScaler'}, {name: 'XenDesktop'},{name:'XenMobile'}]} />
+        <QuestionModal Tag={[{name: 'NetScaler'}, {name: 'XenDesktop'},{name:'XenMobile'}]} />
                 <div className="ibox-title">
                     <div className="row">
                         <div className="col-lg-5">                          
@@ -59,4 +63,4 @@ class Minor extends Component {
     }
 
 }
-export default Minor
+export default XenDesktop
